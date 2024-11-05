@@ -1,11 +1,16 @@
-import React from 'react'
+import Project from "./Project";
 
-function projects() {
+
+function Projects({projects}) {
   return (
-    <div>
-      
+    <div className='portfolio__projects'>
+      {
+        projects.map(project => (
+          <Project key={project.id} project={project} />
+        ))
+      }
     </div>
   )
 }
 
-export default projects
+export default Projects

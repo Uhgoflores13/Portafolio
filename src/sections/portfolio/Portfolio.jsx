@@ -6,6 +6,16 @@ import { useState } from 'react';
 
 function Portfolio() {
   const [projects, setProjects] = useState(data)
+  const categories = data.map(item => item.category)
+  const uniqueCategories =["all", ...new Set(categories)];
+  const filterProjectHandler = (category) => {
+    if(category === 'all'){
+      setProjects(data)
+      return;
+    }
+    const filterProjects = data.filter(project => project.category === category)
+    setProjects(filterProjects)
+  }
 
   return (
    <section id="portfolio">
@@ -14,7 +24,7 @@ function Portfolio() {
       check out some of the projects I recently sorked on for my clients. Use the buttons to toggle the diffrent categories.
     </p>
     <div className="container portfolio__container">
-    <ProjectsCategories />
+    <ProjectsCategories  categories={uniqueCategories} onFilterProjects={filterProjectHandler}/>
     <Projects projects={projects}/>
 
     </div>
