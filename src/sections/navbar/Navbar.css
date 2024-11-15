@@ -28,6 +28,12 @@ nav{
     gap: 3.5rem;
 }
 
+
+.nav__menu a{
+    color: white;
+}
+
+
 #theme_icon{
     background: transparent;
     color: white;

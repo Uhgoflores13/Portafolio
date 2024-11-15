@@ -8,6 +8,7 @@ import Header from "./sections/header/Header";
 import Portfolio from "./sections/portfolio/Portfolio";
 import FAQs from "./sections/faqs/FAQs";
 import FloatingNav from "./sections/floating-nav/FloatingNav";
+import Theme from './theme/Theme';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <FAQs />
       <Contact />
       <Footer />
+      <Theme />
       <FloatingNav />
     </main>
   );
