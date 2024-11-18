@@ -27,21 +27,20 @@ const App = () => {
     setShowFloatingNav(false)
   }
 
-  const floatingNavToggleHandler = () =>{
-    if(siteYPosition < (mainRef?.current?.getBoundingClientRect().y - 5) || siteYPosition > (mainRef?.current?.getBoundingClientRect().y + 5)) {
-      showFloatingNavHandler();
-    }else{
-      hideFloatingNavHandler();
-    }
-
-    setSiteYPosition(mainRef?.current?.getBoundingClientRect().y)
-  }
-
   useEffect(() => {
-  const checkYPosition =  setInterval(floatingNavToggleHandler, 2000)
+    const floatingNavToggleHandler = () => {
+      if(siteYPosition < (mainRef?.current?.getBoundingClientRect().y - 5) || siteYPosition > (mainRef?.current?.getBoundingClientRect().y + 5)) {
+        showFloatingNavHandler();
+      } else {
+        hideFloatingNavHandler();
+      }
+      setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
+    };
 
-  return () => clearInterval(checkYPosition)
-  }, [siteYPosition])
+    const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
+
+    return () => clearInterval(checkYPosition);
+  }, [siteYPosition]);
 
 
   return (
