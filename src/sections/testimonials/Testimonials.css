@@ -17,7 +17,9 @@
     display: flex;
     align-items: center;
     gap:  1rem;
-    margin-top: 1.5rem;
+    margin-top: 2%
+    
+    ;
 }
 
 .testimonial__client-avatar{
@@ -26,6 +28,7 @@
     border-radius: var(--border-radius-2);
     overflow: hidden;
     transition: var(--transition);
+    margin: 0.4rem 0 0.4rem 0;
 }
 
 .swiper-pagination-bullet{

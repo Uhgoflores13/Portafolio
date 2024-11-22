@@ -7,8 +7,10 @@ import Image6 from '../../assets/project6.jpg'
 import Image7 from '../../assets/project7.jpg'
 import Image8 from '../../assets/project8.jpg'
 import Image9 from '../../assets/project9.jpg'
+import Image10 from '../../assets/project10.jpg.png'
 
 const data = [
+
     {
         id: 1,
         category: 'uiux',
@@ -89,7 +91,16 @@ const data = [
         desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
         demo: 'http://egatortutorials.com',
         github: 'https://github.com/egattor'
-    }
+    },
+    {
+        id: 10,
+        category: 'Html/css',
+        image: Image10,
+        title: "Project Arquitecture (HTML/CSS)",
+        desc: "This project is a simple HTML/CSS, about a house architecture. It is a simple project, but it is very useful to learn the basics of HTML/CSS and also responsiveness. Hope you like it!",
+        demo: 'https://arquitecturahtml.netlify.app/',
+        github: 'https://github.com/Uhgoflores13/Arquitectura-html'
+    },
 ]
 
 
